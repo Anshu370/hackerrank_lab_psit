@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    float r, R, CI, SI, p, t;
+    
+    scanf("%f %f %f", &p, &r, &t);
+    
+    SI = (p*r*t)/100.0;
+    
+    R = pow(1+(r/100.0), t);
+    CI = (p*R)-p;
+    
+    printf("%0.2f %0.2f", SI, CI);   
+    return 0;
+}
