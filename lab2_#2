@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    float da, hra, gross_salary, b_s;
+    scanf("%f", &b_s);
+    da = (20*b_s)/100;
+    hra = (25*b_s)/100;
+    
+    gross_salary = da+hra+b_s;
+    
+    printf("%0.2f", gross_salary);
+    return 0;
+}
