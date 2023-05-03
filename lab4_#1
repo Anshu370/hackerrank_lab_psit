@@ -1,0 +1,71 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int sub1, sub2, sub3, sub4, sub5, cp=0;
+    float result=0, sum=0;
+    
+    scanf("%d %d %d %d %d", &sub1, &sub2, &sub3, &sub4, &sub5);
+    
+    if(sub1<0 || sub1>100){
+        printf("INVALID MARKS");
+        return 0;
+    }
+    if(sub2<0 || sub2>100){
+        printf("INVALID MARKS");
+        return 0;
+    }
+    if(sub3<0 || sub3>100){
+        printf("INVALID MARKS");
+        return 0;
+    }
+    if(sub4<0 || sub4>100){
+        printf("INVALID MARKS");
+        return 0;
+    }
+    if(sub5<0 || sub5>100){
+        printf("INVALID MARKS");
+        return 0;
+    }
+    
+    
+    
+    sum = sub1+sub2+sub3+sub4+sub5;
+    result=sum/5.0;
+    if(sub1<30){
+        cp+=1;
+    }
+    if(sub2<30){
+        cp+=1;
+    }
+    if(sub3<30){
+        cp+=1;
+    }
+    if(sub4<30){
+        cp+=1;
+    }
+    if(sub5<30){
+        cp+=1;
+    }
+    
+    
+    if((result)>=75.0){
+        printf("Pass First division %.1f CP:%d", result, cp);
+    }
+    else if((result)>=60.0 && (result)<75.0){
+        printf("Pass Second division %.1f CP:%d", result, cp);
+    }
+    else if((result)>=33.0 && (result)<60.0){
+        printf("Pass Third division %.1f CP:%d", result, cp);
+    }
+    else{
+        printf("Fail CP:%d", cp);
+    }
+    
+    return 0;
+}
+
+
