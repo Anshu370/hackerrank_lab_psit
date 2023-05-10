@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int a, r, reverse = 0;
+    scanf("%d", &a);
+    
+    if(a>=1 && a<=99999999){
+        while(a>0){
+        r = a%10;
+        reverse = (reverse*10)+r;
+        a/=10;
+        }
+        while(reverse>0){
+            r = reverse%10;
+            if(r==0)printf("Zero ");
+            if(r==1)printf("One ");
+            if(r==2)printf("Two ");
+            if(r==3)printf("Three ");
+            if(r==4)printf("Four ");
+            if(r==5)printf("Five ");
+            if(r==6)printf("Six ");
+            if(r==7)printf("Seven ");
+            if(r==8)printf("Eight ");
+            if(r==9)printf("Nine ");
+            reverse/=10;
+
+        }
+    return 0;
+    }
+    
+    
+}
