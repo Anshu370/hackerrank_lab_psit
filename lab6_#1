@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <math.h>
+
+void armstrong(int n1, int n2){
+    int temp, check, pw=0, r, am_st=0;
+
+   if(n1==n2){
+       
+   }
+    
+   else{
+        temp = n1;
+        check = n1;
+        while(n1>0){
+            r=n1%10;
+            pw+=1;
+            n1/=10;
+        }
+        while(temp>0){
+            r = temp%10;
+            am_st += pow(r, pw);
+            temp/=10;
+        }
+        if(am_st == check){
+            printf("%d ", am_st);
+        }
+       armstrong(check+1, n2);
+   }
+   
+}
+
+int main(){
+    int a, b;
+    scanf("%d %d" , &a, &b);
+    armstrong(a, b);
+    
+}  
