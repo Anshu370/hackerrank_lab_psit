@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+  int a, c=0;
+  // printf("Enter a number");
+  scanf("%d", &a);
+
+  if(a==1){
+    c+=1;
+  }
+  else{
+    for(int i=2;i<=a/2;i++){
+    if(a%i==0){
+      c+=1;
+      break;
+    }
+  }
+  }
+
+  
+  if(c==0)
+    printf("YES");
+  else
+    printf("NO");
+  return 0;
+}
