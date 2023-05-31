@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(){
+    int a, b, i, j, coin = 0;
+    scanf("%d",&a);
+    for(i=0;i<a;i++){
+        scanf("%d",&b);
+        
+        for(j=1;j<=b;j++){
+            coin = coin+j;
+            if(coin>b){
+                printf("%d\n",j-1);
+                coin = 0;
+                break;
+            }
+                
+            else if(coin==b){
+                printf("%d\n",j);
+                coin = 0;
+                break;
+            }
+        }
+    }
+}
