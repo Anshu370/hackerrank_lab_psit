@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+void strong(int);
+
+int main(){
+    int b;
+    scanf("%d",&b);
+    for(int i = 1;i<=b;i++){
+        strong(i);
+    }
+}
+
+
+void strong(int a){
+    int rem, sum=0, fact=1,check;
+    check = a;
+    while(a>0){
+        fact = 1;
+        rem=a%10;
+        while(rem>=1){
+            fact*=rem;
+            rem--;
+        }
+        sum+=fact;
+        a/=10;
+    }
+    
+    if(sum==check){
+        printf("%d ",check);
+    }
+    sum=0;
+}
+
