@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+void catandmouse(int,int,int);
+
+int main(){
+    int x, y, z,n,i;
+    scanf("%d\n",&n);
+    for(i=0;i<n;i++){
+        scanf("%d %d %d",&x,&y,&z);
+        catandmouse(x,y,z);
+    }
+    
+}
+
+void catandmouse(int x, int y, int z){
+    if(abs(x-z)==abs(y-z))
+        printf("Mouse C\n");
+    else if(abs(x-z)<abs(y-z))
+        printf("Cat A\n");
+    else
+        printf("Cat B\n");
+}
