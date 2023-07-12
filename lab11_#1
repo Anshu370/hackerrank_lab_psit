@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int gcd(int q, int d){
+
+    if(d%q==0) return q;
+    else return gcd(d%q,q);
+
+}
+    
+
+int main() {
+    int k,n, n1, n2;
+    scanf("%d", &n);
+    
+    for(k=0;k<n;k++){
+        scanf("%d",&n1);
+        scanf("%d",&n2);
+        printf("%d\n", gcd(n1,n2));
+    }
+    return 0;
+}
+
